@@ -1,0 +1,28 @@
+# robots.txt for Emotion Detect
+# https://emotion-detect.example.com
+
+User-agent: *
+Allow: /
+
+# Block API routes (none exist yet, but future-proof)
+Disallow: /api/
+Disallow: /admin/
+
+# Block internal build artifacts if accidentally exposed
+Disallow: /assets/*.map$
+Disallow: /*.json$
+
+# Allow crawlers to fetch essential PWA assets
+Allow: /manifest.webmanifest
+Allow: /icons/
+Allow: /models/
+
+# Sitemap location
+Sitemap: https://emotion-detect.example.com/sitemap.xml
+
+# Crawl-delay for aggressive bots (politeness, not required)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
